@@ -1,18 +1,22 @@
-# Declare parameters
-param m;  # Number of facilities
-param n;  # Number of customers
-param C{i in 1..m, j in 1..n};  # Unit transportation cost from facility i to customer j
-param S{i in 1..m};  # Supply at facility i
-param d{j in 1..n};  # Demand at customer j
+# Lab 1 BAN402 - Exercise 5
+# I'm enjoying this course :)
+set ORIG;   # origins
+set DEST;   # destinations
 
-# Declare decision variables
-var x{i in 1..m, j in 1..n} >= 0;
+param s{ORIG} >= 0;   # amounts available at origins
+param d{DEST} >= 0;   # amounts required at destinations
+param c{ORIG,DEST} >= 0;   # shipment costs per unit
 
-# Objective function to minimize total transportation cost
-minimize z: sum{i in 1..m, j in 1..n} C[i,j] * x[i,j];
+var x{ORIG,DEST} >= 0;    # units to be shipped
 
-# Supply constraints
-subject to supply_constraints{i in 1..m}: sum{j in 1..n} x[i,j] = S[i];
+minimize z:   #minimize cost
+   sum {i in ORIG, j in DEST} c[i,j] * x[i,j];
 
-# Demand constraints
-subject to demand_constraints{j in 1..n}: sum{i in 1..m} x[i,j] = d[j];
+subject to 
+Supply {i in ORIG}: #respect supply capacities
+   sum {j in DEST} x[i,j] <= s[i];
+
+Demand {j in DEST}: #satisfy demand
+   sum {i in ORIG} x[i,j] = d[j];
+
+   

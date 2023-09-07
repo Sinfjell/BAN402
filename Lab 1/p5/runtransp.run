@@ -1,22 +1,7 @@
-reset; 
-
-# Load the model and data
+reset;
 model transp.mod;
 data datatransp.dat;
-
-# Determine model
-option solver cplex; 
-
-# Solve the model
+option solver cplex;
 solve;
+display z, x > soltransp.txt;
 
-# Display the results
-display z;
-display x;
-
-# Write the results to soltransp.txt
-printf "Optimal Objective Value: %f\n", z > "soltransp.txt";
-printf "Optimal value of x: \n" >> "soltransp.txt";
-for {i in 1..m, j in 1..n} {
-    printf "(%d, %d): %f\n", i, j, x[i,j] >> "soltransp.txt";
-}

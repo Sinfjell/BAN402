@@ -1,7 +1,0 @@
-reset;
-model transp.mod;
-data datatransp.dat;
-option solver cplex;
-solve;
-display z, x > soltransp.txt;
-
