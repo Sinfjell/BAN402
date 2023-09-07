@@ -1,0 +1,7 @@
+reset;
+model generalchemicals.mod;
+data datachemicals.dat;
+solve;
+display Profit;
+display x1, x2;
+write "report.txt" "Optimal Objective Value: ", Profit, "\n
