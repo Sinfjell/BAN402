@@ -1,0 +1,18 @@
+reset; 
+
+# Load the model and data
+model generalchemicals.mod;
+data datachemicals.dat;
+
+# Solve the model
+solve;
+
+# Display the results on the screen
+display z;
+display x1;
+display x2;
+
+# Write the results to report.txt
+printf "Optimal Objective Value: %f\n", z > "report.txt";
+printf "Optimal value of x1: %f\n", x1 >> "report.txt";
+printf "Optimal value of x2: %f\n", x2 >> "report.txt";
