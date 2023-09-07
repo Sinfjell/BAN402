@@ -1,0 +1,42 @@
+total_profit = 66000
+x1 = 70
+x2 = 90
+
+blending.body = 230
+blending.ub = 230
+blending.slack = 0
+
+refining.body = 250
+refining.ub = 250
+refining.slack = 0
+
+demandlimit.body = 90
+demandlimit.ub = 120
+demandlimit.slack = 30
+
+blending = 33.3333
+blending.down = 140
+blending.current = 230
+blending.up = 500
+
+refining = 233.333
+refining.down = 115
+refining.current = 250
+refining.up = 295
+
+demandlimit = 0
+demandlimit.down = 90
+demandlimit.current = 120
+demandlimit.up = 1e+20
+
+x1.down = 250
+x1.current = 300
+x1.up = 1000
+
+x2.down = 150
+x2.current = 500
+x2.up = 600
+
+x1.rc = 0
+x2.rc = 0
+
