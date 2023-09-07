@@ -1,0 +1,6 @@
+reset;
+model transp.mod;
+data datatransp2.dat;
+option solver cplex;
+solve;
+display z, x > soltransp2.txt;
