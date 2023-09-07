@@ -1,0 +1,11 @@
+param profit1 := 0.3;
+param profit2 := 0.5;
+param blending_time1 := 2;
+param blending_time2 := 1;
+param refining_time1 := 1;
+param refining_time2 := 2;
+param full_time_blending := 200;  # 5 * 40
+param part_time_blending := 30;  # 2 * 15
+param full_time_refining := 240;  # 6 * 40
+param part_time_refining := 10;  # 1 * 10
+
