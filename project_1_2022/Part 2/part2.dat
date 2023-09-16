@@ -64,15 +64,15 @@ param sulfur :=
 # Quality requirements for gasolines
 # Assuming minimum octane rating and maximum sulfur content are the same for all gasolines
 param minOctane :=
-    G1 90
+    G1 88
     G2 90
-    G3 90
-    G4 90
-    G5 90;
+    G3 92
+    G4 94
+    G5 96;
 
 param maxSulfur :=
     G1 2.0
-    G2 2.0
-    G3 2.0
-    G4 2.0
-    G5 2.0;
+    G2 1.5
+    G3 1.2
+    G4 0.8
+    G5 1.5;
