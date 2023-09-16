@@ -1,0 +1,8 @@
+reset;
+model part2.mod;
+data part2.dat;
+
+option solver 'cplex';
+solve;
+
+display x, y, Z > part2.txt;

@@ -1,0 +1,78 @@
+# Sets
+set G := G1 G2 G3 G4 G5;
+set C := C1 C2 C3 C4;
+set M := M1 M2 M3;
+
+# Parameters for maximum weekly purchases and purchase costs
+param maxPurchase := 
+    C1 25000
+    C2 15000
+    C3 1800
+    C4 3200;
+
+param purchaseCost := 
+    C1 45
+    C2 40
+    C3 55
+    C4 50;
+
+# Production cost per barrel of gasolines
+param prodCost := 
+    G1 6
+    G2 6
+    G3 5
+    G4 7
+    G5 8;
+
+# Time required for supervision
+param timeReq := 
+    G1 0.01
+    G2 0.01
+    G3 0.01
+    G4 0.02
+    G5 0.02;
+
+# Minimum demand quantities
+param minDemand : M1 M2 M3 :=
+    G1 3000 2500 5000
+    G2 3000 2000 4250
+    G3 1500	1000 3000
+    G4 2000 2000 4000
+    G5 1000 1000 2000;
+
+# Sales prices
+param salePrice : M1 M2 M3 :=
+    G1 75 75 80
+    G2 75 80 85
+    G3 75 85 90
+    G4 85 90 95
+    G5 90 92 95;
+
+# Quality of crude oils
+param octane :=
+    C1 94
+    C2 90
+    C3 98
+    C4 96;
+
+param sulfur :=
+    C1 1.0
+    C2 2.0
+    C3 0.1
+    C4 0.3;
+
+# Quality requirements for gasolines
+# Assuming minimum octane rating and maximum sulfur content are the same for all gasolines
+param minOctane :=
+    G1 90
+    G2 90
+    G3 90
+    G4 90
+    G5 90;
+
+param maxSulfur :=
+    G1 2.0
+    G2 2.0
+    G3 2.0
+    G4 2.0
+    G5 2.0;
