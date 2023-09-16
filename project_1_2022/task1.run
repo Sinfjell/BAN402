@@ -1,0 +1,11 @@
+reset;
+# Load the model and data files
+model task1.mod;
+# data BAN402_Task.dat;  # Uncomment this line if you have a .dat file
+
+# Solve the model
+option solver 'cplex';
+solve;
+
+# Display the results
+display x1, x2, x3, Total_Cost;
