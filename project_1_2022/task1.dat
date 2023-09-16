@@ -1,0 +1,22 @@
+# Define sets
+set F := F1 F2 F3;
+set P := P1 P2;
+
+# Define parameters
+param cost :=
+F1 30
+F2 20
+F3 40
+;
+
+param reduction : P1 P2:= 
+F1 0.10 0.45
+F2 0.20 0.25
+F3 0.40 0.30
+;
+
+param requirement := 
+P1 25 
+P2 35 
+;
+

@@ -1,0 +1,34 @@
+'Optimal Solution for Each Facility:' = 'Optimal Solution for Each Facility:'
+
+x [*] :=
+F1   11.5385
+F2  119.231
+F3    0
+;
+
+'Total Cost of the Optimal Solution:' = 'Total Cost of the Optimal Solution:'
+
+Total_Cost = 2730.77
+
+'Dual Values for Constraints:' = 'Dual Values for Constraints:'
+
+Pollutant_Constraint.dual [*] :=
+P1  23.0769
+P2  61.5385
+;
+
+'Reduced Costs for Variables:' = 'Reduced Costs for Variables:'
+
+x.rc [*] :=
+F1  -3.55271e-15
+F2   0
+F3  12.3077
+;
+
+'Slack Values for Constraints:' = 'Slack Values for Constraints:'
+
+Pollutant_Constraint.slack [*] :=
+P1  -3.55271e-15
+P2   0
+;
+
